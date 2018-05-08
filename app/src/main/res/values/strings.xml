@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">UserPage</string>
+    <string name="register_label">Register</string>
+</resources>
