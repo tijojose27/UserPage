@@ -1,50 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.tijoj.userpage.MainActivity">
+    android:layout_height="match_parent">
 
-
-    <EditText
-        android:id="@+id/edit_text_usr_email_main"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/edit_text_usr_password_main"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textColor="@color/secondaryText"
-        android:gravity="center"
-        tools:text="tijojose27@hotmail.com"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.tijoj.userpage.MainActivity">
 
-    <EditText
-        android:id="@+id/edit_text_usr_password_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:gravity="center"
-        android:textColor="@color/secondaryText"
-        tools:text="may12345678"/>
+        <EditText
+            android:id="@+id/edit_text_usr_email_main"
+            style="@style/MainItems"
+            android:layout_above="@+id/edit_text_usr_password_main"
+            android:layout_alignParentStart="true"
+            android:inputType="textEmailAddress"
+            android:hint="@string/enter_email_label" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/register_label"
-        android:layout_below="@+id/edit_text_usr_password_main"
-        android:layout_centerHorizontal="true"
-        android:theme="@style/MyButtons"
-        android:layout_marginTop="19dp"/>
+        <EditText
+            android:id="@+id/edit_text_usr_password_main"
+            style="@style/MainItems"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="@string/password_label"/>
 
+        <Button
+            android:id="@+id/btn_register_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_text_usr_password_main"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/round_button"
+            android:text="@string/register_label"
+            android:theme="@style/MyButtons" />
 
-</RelativeLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
