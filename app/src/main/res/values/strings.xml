@@ -3,4 +3,35 @@
     <string name="register_label">Register</string>
     <string name="enter_email_label">ENTER YOUR EMAIL</string>
     <string name="password_label">PASSWORD</string>
+    <string name="profile_picture_label">Profile Picture</string>
+    <string name="profile_details_label">Profile Details</string>
+    <string name="partner_pref_label">Partner Preference </string>
+    <string name="user_pref_profile_label">User Preferences</string>
+    <string name="summary_label">Summary</string>
+    <string name="send_data_label">Send Data</string>
+
+    <string-array name="gender_array">
+        <item>No Selection</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="relegion">
+        <item>N/A</item>
+        <item>Agnostic</item>
+        <item>Buddhist</item>
+        <item>Christian</item>
+        <item>Hindu</item>
+        <item>Muslim</item>
+    </string-array>
+
+    <string-array name="race">
+        <item>N/A</item>
+        <item>Asian</item>
+        <item>African</item>
+        <item>Caucasian</item>
+        <item>Other</item>
+    </string-array>
+
 </resources>

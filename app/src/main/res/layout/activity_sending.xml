@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tijoj.userpage.SendingActivity">
+
+
+    <com.spark.submitbutton.SubmitButton
+        android:id="@+id/btn_send_sending"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/captionText"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="@string/send_data_label"
+        android:layout_marginBottom="20dp"
+        app:sub_btn_background="@color/white"
+        app:sub_btn_duration="3000"
+        app:sub_btn_line_color="@color/colorAccent"
+        app:sub_btn_ripple_color="@color/colorAccent"
+        app:sub_btn_tick_color="@color/white"/>
+
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/btn_send_sending"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:text="SUccess" />
+
+</RelativeLayout>

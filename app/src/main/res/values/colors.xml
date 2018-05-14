@@ -7,5 +7,8 @@
     <!-- MY COLORS -->
     <color name="text">#FFFFFF</color>
     <color name="secondaryText">#757575</color>
-    <color name="warning">#ffc4c4</color>
+    <color name="captionText">#36353B</color>
+    
+    <color name="warning">#ffb2b2</color>
+    <color name="good">#3CD80D</color>
 </resources>

@@ -1,90 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_detail"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
 
     <ScrollView
+        android:id="@+id/scrollView_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="25dp"
-        android:orientation="vertical"
-        tools:context="com.example.tijoj.userpage.DetailActivity">
-
-
-        <ImageView
-            android:id="@+id/image_view_profile"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src=""/>
-
-        <EditText
-            android:id="@+id/edit_text_detail_name"
-            android:hint="Full Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/edit_text_detail_zip"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="ZIP CODE"/>
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_margin="25dp"
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            tools:context="com.example.tijoj.userpage.DetailActivity">
 
-        <EditText
-            android:id="@+id/edit_text_detail_height"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="HEIGHT"/>
-
-        <EditText
-            android:id="@+id/edit_text_detail_gender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="GENDER"/>
-
-        <EditText
-            android:id="@+id/edit_text_detail_dob"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="DATE OF BIRTH"/>
-
-        <EditText
-            android:id="@+id/edit_text_detail_int_gend"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="OPPOSITE GENDER"/>
-
-        <EditText
-            android:id="@+id/edit_text_detail_age_min"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="MIN AGE"/>
-
-        <EditText
-            android:id="@+id/edit_text_detail_age_max"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="MAX AGE"/>
-
-        <EditText
-            android:id="@+id/edit_text_detail_race"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="RACE"/>
-
-        <EditText
-            android:id="@+id/edit_text_detail_religion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="RELEGION"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_details_label"
+                android:gravity="center_horizontal"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"/>
 
 
-    </LinearLayout>
+
+            <ImageView
+                android:id="@+id/image_view_profile"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/placeholder"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/profile_picture_label"
+                android:transitionName="profile"/>
+
+            <EditText
+                android:id="@+id/edit_text_detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:transitionName="profile"/>
+
+            <EditText
+                android:id="@+id/edit_text_detail_zip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ZIP CODE"
+                android:maxLength="5"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/edit_text_detail_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="3"
+                android:hint="HEIGHT format (5'5'' is 505) "
+                android:inputType="number"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="GENDER" />
+
+            <Spinner
+                android:id="@+id/spinner_detail_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:shadowColor="@color/secondaryText"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btn_detail_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date of Birth"
+                android:textSize="20sp"
+                android:background="@drawable/bordered_button"
+                />
+
+            <View
+                android:background="@color/colorAccent"
+                android:layout_width = "match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="3dp"/>
+
+            <TextView
+                android:text="@string/partner_pref_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="GENDER PREFERENCE" />
+
+            <Spinner
+                android:id="@+id/spinner_detail_gender_pref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textSize="20sp"
+                android:layout_marginBottom="15dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="AGE RANGE" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_text_detail_age_min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="MIN AGE"
+                    android:maxLines="1"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/edit_text_detail_age_max"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:hint="MAX AGE"
+                    android:inputType="number" />
+
+
+            </LinearLayout>
+
+
+            <View
+                android:background="@color/colorAccent"
+                android:layout_width = "match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="3dp"/>
+
+            <TextView
+                android:text="Optional"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginBottom="10dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="RACE" />
+
+            <Spinner
+                android:id="@+id/spinner_detail_race"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="RELIGION" />
+
+            <Spinner
+                android:id="@+id/spinner_detail_religion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_save_profile_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_button"
+                android:text="@string/register_label"
+                android:theme="@style/MyButtons" />
+
+        </LinearLayout>
 
     </ScrollView>
+
 </android.support.design.widget.CoordinatorLayout>
